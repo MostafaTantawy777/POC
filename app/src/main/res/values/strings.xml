@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Warba Bank POC</string>
+    <string name="check_your_network_connection_and_try_again">StringsRepository</string>
+    <string name="unknown_error_message">unknown error!</string>
+    <string name="timeout_error_message">timeout_error_message</string>
+
+    <string name="label_home_products">products</string>
+    <string name="label_categories">categories</string>
+    <string name="label_cart">cart</string>
+
+</resources>
