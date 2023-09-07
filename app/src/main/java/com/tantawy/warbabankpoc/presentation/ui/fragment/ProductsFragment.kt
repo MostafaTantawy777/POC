@@ -8,7 +8,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.tantawy.warbabankpoc.R
 import com.tantawy.warbabankpoc.base.fragment.BaseFragment
 import com.tantawy.warbabankpoc.common.CommonState
-import com.tantawy.warbabankpoc.data.models.Products
+import com.tantawy.domain.model.Products
 import com.tantawy.warbabankpoc.databinding.FragmentProductsBinding
 import com.tantawy.warbabankpoc.presentation.ui.adapter.ProductsAdapter
 import com.tantawy.warbabankpoc.presentation.viewmodels.ProductsViewModel

@@ -2,7 +2,7 @@ package com.tantawy.warbabankpoc.presentation.ui.adapter
 
 import android.view.View
 import com.tantawy.warbabankpoc.base.adapter.BaseViewHolder
-import com.tantawy.warbabankpoc.data.models.Products
+import com.tantawy.domain.model.Products
 import com.tantawy.warbabankpoc.databinding.ProductItemBinding
 
 

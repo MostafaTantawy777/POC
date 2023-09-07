@@ -2,8 +2,8 @@ package com.tantawy.warbabankpoc.presentation.viewmodels
 
 import androidx.lifecycle.*
 import com.tantawy.warbabankpoc.common.CommonState
-import com.tantawy.warbabankpoc.data.models.Products
-import com.tantawy.warbabankpoc.domain.usecases.GetProductsUseCase
+import com.tantawy.domain.model.Products
+import com.tantawy.domain.usecases.GetProductsUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
