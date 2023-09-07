@@ -7,7 +7,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.tantawy.warbabankpoc.R
 import com.tantawy.warbabankpoc.base.adapter.BaseAdapter
 import com.tantawy.warbabankpoc.base.adapter.BaseViewHolder
-import com.tantawy.warbabankpoc.data.models.Products
+import com.tantawy.domain.model.Products
 
 class ProductsAdapter(private val items: ArrayList<Products>? = null, itemLayoutRes: Int? = null) :
     BaseAdapter<Products>(items, itemLayoutRes) {
