@@ -9,8 +9,8 @@ android {
 
     defaultConfig {
         applicationId "com.tantawy.warbabankpoc"
-        minSdk 24
-        targetSdk 33
+        minSdk libs.versions.minSdk.get().toInteger()
+        targetSdk libs.versions.targetSdk.get().toInteger()
         versionCode 1
         versionName "1.0"
 
@@ -38,55 +38,34 @@ android {
 }
 
 dependencies {
-
     implementation project(':domain')
     implementation project(':data')
-    implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3'
-
-    //navigation
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.1'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.5.1'
-
-    //lifecycle
-    def lifecycle_version = '2.6.1'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.1"
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
-    implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version")
-    implementation("androidx.lifecycle:lifecycle-common-java8:$lifecycle_version")
-
-    // retrofit
-    def retrofit = '2.9.0'
-    implementation "com.squareup.retrofit2:retrofit:$retrofit"
-    implementation "com.squareup.retrofit2:converter-gson:$retrofit"
-    implementation "com.squareup.okhttp3:logging-interceptor:4.9.0"
-    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
-
-    // koin
-    def koin = '3.1.4'
-    implementation "io.insert-koin:koin-core:$koin"
-    implementation "io.insert-koin:koin-android:$koin"
-    implementation "io.insert-koin:koin-android-compat:$koin"
-
-    //timber
-    implementation "com.jakewharton.timber:timber:4.7.1"
-
-    //image
-    implementation 'de.hdodenhof:circleimageview:3.1.0'
-
-    //glide
-    def glide = '4.11.0'
-    implementation "com.github.bumptech.glide:glide:$glide"
-
-    //testing
-    testImplementation 'junit:junit:4.13.2'
-    testImplementation "io.mockk:mockk:1.13.7"
-    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.2"
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation libs.ktx
+    implementation libs.material
+    implementation libs.constraintlayout
+    implementation libs.appCompat
+    implementation libs.retrofit2
+    implementation libs.converter.gson
+    implementation libs.okhttp
+    implementation libs.logging.interceptor
+    implementation libs.koin.core
+    implementation libs.koin.android
+    implementation libs.koin.android.compat
+    implementation libs.kotlinx.coroutines.android
+    implementation libs.kotlinx.coroutines.core
+    implementation libs.lifecycle.viewmodel
+    implementation libs.lifecycle.extensions
+    implementation libs.lifecycle.runtime.ktx
+    implementation libs.lifecycle.livedata.ktx
+    implementation libs.lifecycle.viewmodel.savedstate
+    implementation libs.lifecycle.common.java8
+    implementation libs.navigation.fragment.ktx
+    implementation libs.navigation.ui.ktx
+    implementation libs.timber
+    implementation libs.glide
+    testImplementation libs.junit
+    testImplementation libs.mockk
+    testImplementation libs.kotlinx.coroutines.test
+    androidTestImplementation libs.espresso.core
+    androidTestImplementation libs.junitx
 }
