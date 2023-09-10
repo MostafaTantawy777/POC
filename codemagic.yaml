@@ -1,6 +1,6 @@
 
 workflows:
-  # This workflow is for generating a debug build for every push to master or main branch
+  # This workflow is for generating a debug build for every push to master branch
   debug-workflow:
     name: Clean Architecture POC
     max_build_duration: 120
@@ -15,7 +15,7 @@ workflows:
       events:
         - push
       branch_patterns:
-        - pattern: 'CI/CD_with_code_magic'
+        - pattern: 'master'
           include: true
 
     scripts:
