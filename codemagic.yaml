@@ -3,11 +3,11 @@ workflows:
   # This workflow is for generating a debug build for every push to master or main branch
   debug-workflow:
     name: Clean Architecture POC
-    max_build_duration: 60
+    max_build_duration: 120
     instance_type: mac_mini_m1
     environment:
-      java: default
-
+      groups:
+        - CI/CD
       vars:
         PACKAGE_NAME: "com.tantawy.warbabankpoc"
 
