@@ -1,0 +1,29 @@
+
+workflows:
+  # This workflow is for generating a debug build for every push to master or main branch
+  debug-workflow:
+    name: Clean Architecture POC
+    max_build_duration: 60
+    instance_type: linux_x2
+    environment:
+      java: default
+
+      vars:
+        PACKAGE_NAME: "com.tantawy.warbabankpoc"
+
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: 'CI/CD_with_code_magic'
+          include: true
+
+    scripts:
+      - name: Build Android APK
+        script: ./gradlew assembleRelease
+    artifacts:
+      - app/build/**/outputs/**/*.apk
+    publishing:
+      email:
+        recipients:
+          - mostafa.tantawy77799@gmail.com
